@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/pizzaicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="navigation-container">
+            <div class="navigation-content">
+                <!-- Title of the website -->
+                <h1>Welcome to Pizza Paradise</h1>
+                <!-- Logo image -->           
+                <div class="logo">
+                    <img src="images/logo.png" alt="Pizza Paradise Logo">
+                </div>
+                <!-- Cart section -->
+                <div class="cart">
+                    <img src="images/cartlogo.png" alt="Cart Image">
+                    <a href="#">Cart</a>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- Main content section -->
+    <main>
+        <!-- Form for ordering pizza -->
+        <form>
+            <fieldset>
+                <legend>Pizza Order</legend>
+                <!-- Input for number of pizzas -->
+                <label for="quantity">Number of Pizzas:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                <br><br>
+                <!-- Dropdown for selecting size -->
+                <label for="size">Size (Number of Slices):</label>
+                <select id="size" name="size" required>
+                    <option value="6">6 Slices</option>
+                    <option value="8">8 Slices</option>
+                    <option value="10">10 Slices</option>
+                </select>
+                <br><br>
+                <!-- Radio buttons for selecting shape -->
+                <label for="round">Shape:</label>
+                <input type="radio" id="round" name="shape" value="round" checked>
+                <label for="round">Round</label>
+                <input type="radio" id="square" name="shape" value="square">
+                <label for="square">Square</label>
+                <br><br>
+                <!-- Fieldset for choosing toppings -->
+            <fieldset>
+                    <legend>Choose your toppings:</legend>
+                    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                    <label for="pepperoni">Pepperoni</label><br>
+                    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label><br>
+                    <input type="checkbox" id="sausage" name="toppings" value="sausage">
+                    <label for="sausage">Sausage</label><br>
+                    <input type="checkbox" id="onions" name="toppings" value="onions">
+                    <label for="onions">Onions</label>
+            </fieldset>
+                <br>
+                <!-- Dropdown for selecting crust type -->
+                <label for="crust_type">Select your crust type:</label><br>
+                <select id="crust_type" name="crust_type" required>
+                    <option value="deep_dish">Deep Dish</option>
+                    <option value="thin_crust">Thin Crust</option>
+                    <option value="pan_pizza">Pan Pizza</option>
+                    <option value="stuffed_crust">Stuffed Crust</option>
+                </select>
+                <br>
+                <!-- Radio buttons for selecting delivery method -->
+                <p>Select your preferred delivery method:</p>
+                <input type="radio" id="take_out" name="delivery_option" value="take_out">
+                <label for="take_out">Take Out</label><br>
+                <input type="radio" id="delivery" name="delivery_option" value="delivery">
+                <label for="delivery">Delivery</label><br>
+                <input type="radio" id="eat_in" name="delivery_option" value="eat_in">
+                <label for="eat_in">Eat In</label><br>
+                <input type="radio" id="pick_up" name="delivery_option" value="pick_up">
+                <label for="pick_up">Pick up</label>
+            </fieldset>
+            <!-- Fieldset for customer information -->
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required autocomplete="off">
+                <br>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+                <br>
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+                <br>
+                <label for="house">House Number:</label>
+                <input type="text" id="house" name="house" required>
+                <br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <br>
+                <label for="postal">Postal Code:</label>
+                <input type="text" id="postal" name="postal" required>
+            </fieldset>
+            <!-- Fieldset for payment method -->
+            <fieldset>
+                <legend>Payment Method</legend>
+                <div class="payment-methods">
+                    <input type="radio" id="credit" name="payment" value="credit">
+                    <label for="credit">Credit Card</label>
+                    <input type="radio" id="debit" name="payment" value="debit">
+                    <label for="debit">Debit Card</label>
+                </div>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber">
+                <br>
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate">
+                <br>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv">
+            </fieldset>
+            <!-- Fieldset for delivery preferences -->
+            <fieldset>
+                <legend>Delivery Preferences</legend>
+                <label for="additional">Additional Preferences:</label>
+                <textarea id="additional" name="additional"></textarea>
+                <br>
+                <label for="time">Expected Delivery Time:</label>
+                 <input type="time" id="time" name="time" min="00:00" max="23:00" required />
+                <br>
+            </fieldset>
+            <!-- Submit and Reset buttons -->
+                 <input type="submit" value="Submit">
+                 <input type="reset" value="Reset">
+        </form>          
+    </main>
+     
+    <footer>Thanks for Ordering</footer>
+   
+</body>
+</html>
